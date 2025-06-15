@@ -1,0 +1,607 @@
+{
+  "frameworks": [
+    {
+      "name": "React",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2025-3191",
+          "affected_versions": "latest",
+          "fixed_version": "not fixed",
+          "severity": "high",
+          "description": "XSS vulnerability in react-draft-wysiwyg related to embedded buttons in iframes.",
+          "exploit": "Malicious iframe content can execute arbitrary JavaScript through embedded buttons.",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-3191"
+          ]
+        },
+        {
+          "cve_id": "CVE-2021-27119",
+          "affected_versions": "<16.14.0",
+          "fixed_version": "16.14.0",
+          "severity": "medium",
+          "description": "React DOM in versions prior to 16.14.0 allows XSS via crafted iframe srcdoc attributes.",
+          "exploit": "An attacker can craft iframe srcdoc attributes that bypass React's XSS protections.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-27119",
+            "https://github.com/facebook/react/pull/20745"
+          ]
+        },
+        {
+          "cve_id": "CVE-2025-30210",
+          "affected_versions": "latest",
+          "fixed_version": "not fixed",
+          "severity": "high",
+          "description": "XSS vulnerability in react-tooltip through raw HTML in tooltips, affecting Bruno IDE.",
+          "exploit": "Malicious HTML in tooltips can execute arbitrary JavaScript.",
+          "references": [
+            "https://cvedetails.com/cve/CVE-2025-30210",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-30210"
+          ]
+        },
+        {
+          "cve_id": "Legacy-XSS-React",
+          "affected_versions": "0.0.1-0.13.x",
+          "fixed_version": ">0.13.x",
+          "severity": "high",
+          "description": "Multiple XSS vulnerabilities in early React versions (0.0.1 to 0.13.x).",
+          "exploit": "Various XSS attack vectors in early React implementations.",
+          "references": [
+            "https://cvedetails.com",
+            "https://support.xlts.dev",
+            "https://security.snyk.io"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vue",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2023-49082",
+          "affected_versions": "<3.3.10",
+          "fixed_version": "3.3.10",
+          "severity": "high",
+          "description": "Vue.js is vulnerable to XSS attacks when using v-bind with the style attribute.",
+          "exploit": "An attacker can inject malicious CSS expressions that execute JavaScript.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-49082",
+            "https://github.com/vuejs/core/security/advisories/GHSA-8qh4-76jm-x4wm"
+          ]
+        },
+        {
+          "cve_id": "CVE-2022-23577",
+          "affected_versions": "<2.6.15,<3.2.31",
+          "fixed_version": "2.6.15,3.2.31",
+          "severity": "medium",
+          "description": "Vue.js is vulnerable to XSS when using v-html with untrusted content.",
+          "exploit": "Malicious HTML can be injected through v-html directive.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-23577",
+            "https://github.com/vuejs/vue/releases/tag/v2.6.15"
+          ]
+        },
+        {
+          "cve_id": "CVE-2023-23337",
+          "affected_versions": "latest",
+          "fixed_version": "not fixed",
+          "severity": "high",
+          "description": "Command injection vulnerability in lodash.template via HeroDevs/Nuxt 2/Vue 2 dependency.",
+          "exploit": "Potential command injection through template processing.",
+          "references": [
+            "https://herodevs.com"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Angular",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2024-21490",
+          "affected_versions": "<1.9.6,<1.5.22",
+          "fixed_version": "1.9.6,1.5.22",
+          "severity": "high",
+          "description": "AngularJS ng-srcset attribute contains a regex-based ReDoS vulnerability causing critical performance slowdown.",
+          "exploit": "Specially crafted input to ng-srcset can cause denial of service through regex processing.",
+          "references": [
+            "https://cvedetails.com/cve/CVE-2024-21490",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-21490",
+            "https://herodevs.com/vulnerability-announcements/cve-2024-21490"
+          ]
+        },
+        {
+          "cve_id": "CVE-2024-8372",
+          "affected_versions": "all",
+          "fixed_version": "patched",
+          "severity": "medium",
+          "description": "AngularJS srcset attribute sanitization vulnerability allowing content modification.",
+          "exploit": "Improper sanitization in srcset attribute can lead to content modification similar to XSS.",
+          "references": [
+            "https://herodevs.com/vulnerability-announcements",
+            "https://opencve.io/cve/CVE-2024-8372"
+          ]
+        },
+        {
+          "cve_id": "CVE-2024-8373",
+          "affected_versions": "all",
+          "fixed_version": "patched",
+          "severity": "medium",
+          "description": "Another sanitization vulnerability in AngularJS reported by HeroDevs.",
+          "exploit": "Sanitization bypass leading to potential content modification.",
+          "references": [
+            "https://cvedetails.com/cve/CVE-2024-8373",
+            "https://support.xlts.dev",
+            "https://herodevs.com/vulnerability-announcements"
+          ]
+        },
+        {
+          "cve_id": "CVE-2023-26118",
+          "affected_versions": "all",
+          "fixed_version": "patched",
+          "severity": "medium",
+          "description": "ReDoS vulnerability in AngularJS input[type=url] function.",
+          "exploit": "Regular expression denial of service in URL input validation.",
+          "references": [
+            "https://my.f5.com",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-26118",
+            "https://opencve.io"
+          ]
+        },
+        {
+          "cve_id": "CVE-2023-26117",
+          "affected_versions": "<15.2.7",
+          "fixed_version": "15.2.7",
+          "severity": "high",
+          "description": "Angular is vulnerable to XSS attacks via specific template expressions.",
+          "exploit": "An attacker can craft template expressions that bypass Angular's sanitization.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-26117",
+            "https://github.com/angular/angular/security/advisories/GHSA-pf87-6c9q-jv63"
+          ]
+        },
+        {
+          "cve_id": "CVE-2023-26116",
+          "affected_versions": "all",
+          "fixed_version": "patched",
+          "severity": "medium",
+          "description": "ReDoS vulnerability in AngularJS angular.copy() function.",
+          "exploit": "Regular expression denial of service in copy function.",
+          "references": [
+            "https://my.f5.com",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-26116",
+            "https://opencve.io"
+          ]
+        },
+        {
+          "cve_id": "CVE-2022-25869",
+          "affected_versions": "<13.3.1",
+          "fixed_version": "13.3.1",
+          "severity": "medium",
+          "description": "IE-specific XSS vulnerability in <textarea> interpolation in AngularJS.",
+          "exploit": "An attacker can exploit textarea interpolation to execute XSS in Internet Explorer.",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25869",
+            "https://opencve.io"
+          ]
+        },
+        {
+          "cve_id": "CVE-2022-25844",
+          "affected_versions": ">=1.7.0",
+          "fixed_version": "patched",
+          "severity": "medium",
+          "description": "ReDoS vulnerability in AngularJS using high-value space parameters.",
+          "exploit": "Regular expression denial of service through specially crafted space parameters.",
+          "references": [
+            "https://support.xlts.dev",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25844",
+            "https://opencve.io"
+          ]
+        },
+        {
+          "cve_id": "CVE-2020-7676",
+          "affected_versions": "<1.8.0",
+          "fixed_version": "1.8.0",
+          "severity": "high",
+          "description": "XSS vulnerability in AngularJS versions before 1.8.0.",
+          "exploit": "Cross-site scripting vulnerability allowing code execution.",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7676"
+          ]
+        },
+        {
+          "cve_id": "CVE-2021-4231",
+          "affected_versions": "2-11",
+          "fixed_version": ">11",
+          "severity": "high",
+          "description": "XSS vulnerability in Angular 2-11 comment processing.",
+          "exploit": "Cross-site scripting through malicious comment content.",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-4231"
+          ]
+        },
+        {
+          "cve_id": "CVE-2021-21277",
+          "affected_versions": "all",
+          "fixed_version": "patched",
+          "severity": "critical",
+          "description": "Remote Code Execution in angular-expressions module.",
+          "exploit": "RCE through compile(userInput) allowing arbitrary code execution.",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-21277"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Next.js",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2025-29927",
+          "affected_versions": "<12.3.5,<13.5.9,<14.2.25,<15.2.3",
+          "fixed_version": "12.3.5,13.5.9,14.2.25,15.2.3",
+          "severity": "high",
+          "description": "Authentication bypass vulnerability in Next.js through x-middleware-subrequest-id header.",
+          "exploit": "Attackers can bypass authentication using manipulated headers.",
+          "references": [
+            "https://zhi.oscs1024.com",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-29927"
+          ]
+        },
+        {
+          "cve_id": "CVE-2025-30218",
+          "affected_versions": "all",
+          "fixed_version": "patched",
+          "severity": "high",
+          "description": "SSRF and credential leakage risk in Next.js middleware.",
+          "exploit": "Server-side request forgery and credential exposure through x-middleware-subrequest-id.",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-30218"
+          ]
+        },
+        {
+          "cve_id": "CVE-2025-32421",
+          "affected_versions": "<14.2.24,<15.1.6",
+          "fixed_version": "14.2.24,15.1.6",
+          "severity": "medium",
+          "description": "Race condition causing pageProps data to be served as HTML in Next.js.",
+          "exploit": "Race condition vulnerability affecting data rendering.",
+          "references": [
+            "https://cve.org",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-32421",
+            "https://nvd.nist.gov"
+          ]
+        },
+        {
+          "cve_id": "CVE-2025-48068",
+          "affected_versions": "<15.2.2",
+          "fixed_version": "15.2.2",
+          "severity": "medium",
+          "description": "Source code leakage in Next.js development server.",
+          "exploit": "Leakage of source code in development environment.",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-48068"
+          ]
+        },
+        {
+          "cve_id": "CVE-2023-46298",
+          "affected_versions": "<13.5.4",
+          "fixed_version": "13.5.4",
+          "severity": "high",
+          "description": "Next.js before 13.5.4 is vulnerable to path traversal attacks.",
+          "exploit": "An attacker can access files outside the intended directory.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-46298",
+            "https://github.com/vercel/next.js/security/advisories/GHSA-mh3m-8c74-74xh"
+          ]
+        },
+        {
+          "cve_id": "CVE-2023-36013",
+          "affected_versions": "<13.4.13",
+          "fixed_version": "13.4.13",
+          "severity": "medium",
+          "description": "Next.js before 13.4.13 is vulnerable to XSS via specific HTML attributes.",
+          "exploit": "An attacker can inject malicious scripts via specific HTML attributes.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-36013",
+            "https://github.com/vercel/next.js/security/advisories/GHSA-9qmh-276g-x7jq"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "React Router",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2025-43864",
+          "affected_versions": "7.2.0-7.5.1",
+          "fixed_version": "7.5.2",
+          "severity": "high",
+          "description": "Cache poisoning DoS vulnerability in React Router versions 7.2.0-7.5.1.",
+          "exploit": "Attackers can cause denial of service through cache poisoning attacks.",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-43864",
+            "https://nvd.nist.gov",
+            "https://cve.org"
+          ]
+        },
+        {
+          "cve_id": "CVE-2025-43865",
+          "affected_versions": "7.0-7.5.1",
+          "fixed_version": "7.5.2",
+          "severity": "high",
+          "description": "Additional cache poisoning vulnerability in React Router versions 7.0-7.5.1.",
+          "exploit": "Cache poisoning vulnerability allowing DoS attacks.",
+          "references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-43865",
+            "https://nvd.nist.gov"
+          ]
+        },
+        {
+          "cve_id": "CVE-2025-31137",
+          "affected_versions": "<7.4.1",
+          "fixed_version": "7.4.1",
+          "severity": "medium",
+          "description": "URL spoofing vulnerability in React Router using Host/X-Forwarded-Host headers.",
+          "exploit": "Attackers can spoof URLs using manipulated HTTP headers.",
+          "references": [
+            "https://support.xlts.dev",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-31137",
+            "https://zhero-web-sec.github.io"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Remix",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2025-31137",
+          "affected_versions": "<2.16.3",
+          "fixed_version": "2.16.3",
+          "severity": "medium",
+          "description": "URL spoofing vulnerability in Remix using Host/X-Forwarded-Host headers.",
+          "exploit": "Attackers can spoof URLs using manipulated HTTP headers.",
+          "references": [
+            "https://support.xlts.dev",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-31137",
+            "https://zhero-web-sec.github.io"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nuxt.js",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2023-45857",
+          "affected_versions": "<3.8.0",
+          "fixed_version": "3.8.0",
+          "severity": "high",
+          "description": "Nuxt.js before 3.8.0 is vulnerable to XSS via specific HTML attributes.",
+          "exploit": "An attacker can inject malicious scripts via specific HTML attributes.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-45857",
+            "https://github.com/nuxt/nuxt/security/advisories/GHSA-5r9j-q3g3-8jcq"
+          ]
+        },
+        {
+          "cve_id": "CVE-2022-0691",
+          "affected_versions": "<2.15.8",
+          "fixed_version": "2.15.8",
+          "severity": "medium",
+          "description": "Nuxt.js before 2.15.8 is vulnerable to path traversal attacks.",
+          "exploit": "An attacker can access files outside the intended directory.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-0691",
+            "https://github.com/nuxt/nuxt/security/advisories/GHSA-wjh3-44c3-vf5m"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "jQuery",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2023-5432",
+          "affected_versions": "<=3.1",
+          "fixed_version": ">3.1",
+          "severity": "high",
+          "description": "Stored XSS vulnerability in jQuery News Ticker WordPress plugin through shortcode.",
+          "exploit": "Attackers can inject XSS payloads through WordPress shortcodes.",
+          "references": [
+            "https://suse.com",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-5432",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-5432"
+          ]
+        },
+        {
+          "cve_id": "CVE-2023-5464",
+          "affected_versions": "<=8.1",
+          "fixed_version": ">8.1",
+          "severity": "high",
+          "description": "SQL injection vulnerability in jQuery Accordion Slideshow plugin.",
+          "exploit": "SQL injection through plugin parameters.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-5464"
+          ]
+        },
+        {
+          "cve_id": "CVE-2020-11023",
+          "affected_versions": "<3.5.0",
+          "fixed_version": "3.5.0",
+          "severity": "high",
+          "description": "jQuery before 3.5.0 is vulnerable to XSS via specific HTML strings.",
+          "exploit": "Specially crafted HTML can execute scripts when processed by jQuery.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-11023",
+            "https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/"
+          ]
+        },
+        {
+          "cve_id": "CVE-2019-11358",
+          "affected_versions": "<3.4.0",
+          "fixed_version": "3.4.0",
+          "severity": "medium",
+          "description": "jQuery before 3.4.0 is vulnerable to prototype pollution.",
+          "exploit": "An attacker can modify JavaScript object prototypes via jQuery.extend.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-11358",
+            "https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lodash",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2024-38986",
+          "affected_versions": "<=1.1.1",
+          "fixed_version": "1.1.2",
+          "severity": "critical",
+          "description": "Prototype pollution in @75lb/deep-merge module, a lodash-related dependency.",
+          "exploit": "Critical prototype pollution allowing arbitrary code execution.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-38986",
+            "https://wiz.io"
+          ]
+        },
+        {
+          "cve_id": "CVE-2023-23337",
+          "affected_versions": "latest",
+          "fixed_version": "not fixed",
+          "severity": "high",
+          "description": "Command injection vulnerability in lodash.template via HeroDevs/Nuxt 2/Vue 2 dependency.",
+          "exploit": "Potential command injection through template processing.",
+          "references": [
+            "https://herodevs.com"
+          ]
+        },
+        {
+          "cve_id": "Lodash-ZipObjectDeep",
+          "affected_versions": "all",
+          "fixed_version": "patched",
+          "severity": "high",
+          "description": "Prototype pollution in lodash.zipObjectDeep function.",
+          "exploit": "Attackers can pollute JavaScript prototypes leading to various security issues.",
+          "references": [
+            "https://access.redhat.com",
+            "https://security.snyk.io",
+            "https://cve.mitre.org"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Axios",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2025-27152",
+          "affected_versions": "<=1.7.9",
+          "fixed_version": "1.8.2",
+          "severity": "high",
+          "description": "URL processing flaw in Axios: even with baseURL set, absolute URLs bypass it causing SSRF and credential leakage.",
+          "exploit": "Attackers can cause SSRF and credential leakage through URL manipulation.",
+          "references": [
+            "https://github.com",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-27152",
+            "https://vulners.com"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Express.js",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2022-24999",
+          "affected_versions": "<4.17.3",
+          "fixed_version": "4.17.3",
+          "severity": "high",
+          "description": "Express.js before 4.17.3 is vulnerable to request smuggling.",
+          "exploit": "An attacker can craft HTTP requests that bypass security controls.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-24999",
+            "https://github.com/expressjs/express/security/advisories/GHSA-hrpp-h998-j3pp"
+          ]
+        },
+        {
+          "cve_id": "CVE-2022-24785",
+          "affected_versions": "<4.17.3",
+          "fixed_version": "4.17.3",
+          "severity": "medium",
+          "description": "Express.js before 4.17.3 is vulnerable to denial of service via large transfer-encoding headers.",
+          "exploit": "An attacker can cause DoS by sending large transfer-encoding headers.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-24785",
+            "https://github.com/expressjs/express/pull/4782"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bootstrap",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2023-38171",
+          "affected_versions": "<5.3.1",
+          "fixed_version": "5.3.1",
+          "severity": "medium",
+          "description": "Bootstrap before 5.3.1 is vulnerable to XSS via tooltip and popover components.",
+          "exploit": "An attacker can inject malicious scripts via tooltip and popover content.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-38171",
+            "https://github.com/twbs/bootstrap/security/advisories/GHSA-f8q6-p92m-55qc"
+          ]
+        },
+        {
+          "cve_id": "CVE-2019-8331",
+          "affected_versions": "<4.3.1",
+          "fixed_version": "4.3.1",
+          "severity": "medium",
+          "description": "Bootstrap before 4.3.1 is vulnerable to XSS via data-template attribute.",
+          "exploit": "An attacker can inject malicious scripts via data-template attribute.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-8331",
+            "https://github.com/twbs/bootstrap/releases/tag/v4.3.1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tailwind CSS",
+      "vulnerabilities": [
+        {
+          "cve_id": "CVE-2021-32682",
+          "affected_versions": "<2.2.0",
+          "fixed_version": "2.2.0",
+          "severity": "medium",
+          "description": "Tailwind CSS before 2.2.0 is vulnerable to prototype pollution.",
+          "exploit": "An attacker can modify JavaScript object prototypes via crafted CSS classes.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-32682",
+            "https://github.com/tailwindlabs/tailwindcss/security/advisories/GHSA-9vp9-q3fc-r5jv"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fast-loops",
+      "vulnerabilities": [
+        {
+          "cve_id": "Fast-loops-PP-2024",
+          "affected_versions": "all",
+          "fixed_version": "patched",
+          "severity": "medium",
+          "description": "Prototype pollution vulnerability in Fast-loops package.",
+          "exploit": "Prototype pollution allowing various security issues.",
+          "references": [
+            "https://herodevs.com",
+            "https://security.snyk.io",
+            "https://gist.github.com"
+          ]
+        }
+      ]
+    }
+  ]
+} 

@@ -1,0 +1,24 @@
+apiVersion: v2
+name: spiderjs
+description: A Helm chart for SpiderJS - JavaScript application security scanner
+type: application
+version: 0.1.0
+appVersion: 1.0.0
+maintainers:
+  - name: Ibrahim
+    email: ibrahim@example.com
+keywords:
+  - security
+  - javascript
+  - scanner
+  - analysis
+home: https://github.com/ibrahmsql/spiderjs
+sources:
+  - https://github.com/ibrahmsql/spiderjs
+annotations:
+  category: Security
+dependencies:
+  - name: mongodb
+    version: ~12.1.27
+    repository: https://charts.bitnami.com/bitnami
+    condition: mongodb.enabled 

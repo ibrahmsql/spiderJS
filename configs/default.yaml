@@ -1,0 +1,132 @@
+# Default SpiderJS configuration
+
+# Target URL (required)
+url: ""
+
+# Timeout for requests
+timeout: 30s
+
+# Maximum crawl depth
+max_depth: 3
+
+# User agent
+user_agent: "SpiderJS/1.0.0"
+
+# Number of concurrent requests
+concurrent: 10
+
+# Output file path
+output: ""
+
+# Output format (console, json, html, xml)
+format: "console"
+
+# Log level (debug, info, warn, error)
+log_level: "info"
+
+# Log file path
+log_file: ""
+
+# Disable colored output
+no_color: false
+
+# Proxy URL
+proxy: ""
+
+# Skip TLS certificate verification
+skip_tls_verify: false
+
+# Scanner options
+scan_options:
+  # Include XSS scanning
+  include_xss: true
+  
+  # Include injection scanning
+  include_injection: true
+  
+  # Include CSRF scanning
+  include_csrf: true
+  
+  # Include CORS scanning
+  include_cors: true
+  
+  # Include security headers scanning
+  include_headers: true
+  
+  # Include cookie security scanning
+  include_cookies: true
+  
+  # Include supply chain scanning
+  include_supply_chain: true
+  
+  # Include prototype pollution scanning
+  include_prototype: true
+  
+  # Include subdomains in scan
+  include_subdomains: false
+  
+  # Perform active scanning (potentially intrusive)
+  active_scan: false
+  
+  # Fuzzing level (0-3)
+  fuzz_level: 1
+  
+# Framework detection options
+framework_detection:
+  # Enable framework detection
+  enabled: true
+  
+  # Confidence threshold (0.0-1.0)
+  confidence_threshold: 0.7
+  
+  # Detect framework versions
+  detect_versions: true
+  
+  # Check for framework vulnerabilities
+  check_vulnerabilities: true
+  
+  # Framework fingerprint file
+  fingerprint_file: "fingerprints/frameworks.json"
+  
+  # CVE database file
+  cve_database: "fingerprints/cve_database.json"
+
+# Machine learning options
+ml_options:
+  # Enable ML-based vulnerability detection
+  enabled: true
+  
+  # ML model to use (basic, enhanced)
+  model: "enhanced"
+  
+  # Model configuration file
+  model_config: "ml/enhanced_model.json"
+  
+  # Framework vulnerability detector configuration
+  framework_detector: "ml/framework_vulnerability_detector.json"
+  
+  # Detection threshold (0.0-1.0)
+  threshold: 0.6
+  
+  # Use GPU acceleration if available
+  use_gpu: true
+  
+  # Batch size for processing
+  batch_size: 16
+  
+  # Auto-update ML models
+  auto_update: true
+
+# Exploit testing options
+exploit_options:
+  # Enable exploit testing (potentially intrusive)
+  enabled: false
+  
+  # Exploit payload file
+  payload_file: "payloads/framework_exploits.json"
+  
+  # Safe mode (no actual exploitation)
+  safe_mode: true
+  
+  # Report only verified vulnerabilities
+  verified_only: false

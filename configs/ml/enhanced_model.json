@@ -1,0 +1,216 @@
+{
+  "model_name": "SpiderJS-ML-2.0",
+  "version": "2.0.0",
+  "description": "Enhanced machine learning model for JavaScript vulnerability detection with framework-specific patterns",
+  "created_at": "2025-06-15T00:00:00Z",
+  "features": [
+    "code_length",
+    "comment_ratio",
+    "function_count",
+    "nested_loops",
+    "dependency_count",
+    "unsafe_patterns",
+    "framework_specific_patterns",
+    "api_usage",
+    "security_headers",
+    "cookie_security",
+    "cors_config",
+    "csp_analysis",
+    "dependency_versions"
+  ],
+  "thresholds": {
+    "critical": 0.9,
+    "high": 0.8,
+    "medium": 0.6,
+    "low": 0.4,
+    "info": 0.2
+  },
+  "weights": {
+    "code_length": 0.05,
+    "comment_ratio": 0.05,
+    "function_count": 0.05,
+    "nested_loops": 0.1,
+    "dependency_count": 0.1,
+    "unsafe_patterns": 0.2,
+    "framework_specific_patterns": 0.15,
+    "api_usage": 0.1,
+    "security_headers": 0.05,
+    "cookie_security": 0.05,
+    "cors_config": 0.05,
+    "csp_analysis": 0.05,
+    "dependency_versions": 0.1
+  },
+  "unsafe_patterns": [
+    "eval\\(",
+    "Function\\(",
+    "setTimeout\\([^,]+,",
+    "setInterval\\([^,]+,",
+    "document\\.write\\(",
+    "innerHTML",
+    "outerHTML",
+    "insertAdjacentHTML",
+    "\\.src\\s*=",
+    "localStorage",
+    "sessionStorage",
+    "new\\s+Function\\(",
+    "Object\\.assign\\(\\s*{}\\s*,",
+    "Object\\.assign\\(\\s*Object\\.create\\(null\\)\\s*,",
+    "dangerouslySetInnerHTML",
+    "__html",
+    "require\\(\\s*['\"][^'\"]+['\"]\\s*\\)",
+    "JSON\\.parse\\(",
+    "location\\.href\\s*=",
+    "location\\.replace\\(",
+    "location\\.assign\\(",
+    "document\\.domain\\s*=",
+    "document\\.cookie\\s*=",
+    "window\\.open\\(",
+    "postMessage\\("
+  ],
+  "framework_specific_patterns": {
+    "React": [
+      "dangerouslySetInnerHTML",
+      "useRef\\(\\.current",
+      "ReactDOM\\.render\\(",
+      "ReactDOM\\.createPortal\\(",
+      "React\\.createElement\\(",
+      "React\\.cloneElement\\("
+    ],
+    "Vue": [
+      "v-html",
+      "v-bind:href",
+      "v-bind:src",
+      "v-bind:style",
+      "this\\.$refs",
+      "this\\.$el",
+      "this\\.$nextTick\\("
+    ],
+    "Angular": [
+      "\\[innerHTML\\]",
+      "bypassSecurityTrustHtml",
+      "bypassSecurityTrustScript",
+      "bypassSecurityTrustStyle",
+      "bypassSecurityTrustUrl",
+      "bypassSecurityTrustResourceUrl",
+      "ElementRef\\.nativeElement"
+    ],
+    "jQuery": [
+      "\\$\\(['\"][^'\"]+['\"]\\)\\.html\\(",
+      "\\$\\(['\"][^'\"]+['\"]\\)\\.append\\(",
+      "\\$\\(['\"][^'\"]+['\"]\\)\\.prepend\\(",
+      "\\$\\(['\"][^'\"]+['\"]\\)\\.after\\(",
+      "\\$\\(['\"][^'\"]+['\"]\\)\\.before\\(",
+      "\\$\\(['\"][^'\"]+['\"]\\)\\.wrap\\(",
+      "\\$\\(['\"][^'\"]+['\"]\\)\\.attr\\(['\"]href['\"]",
+      "\\$\\(['\"][^'\"]+['\"]\\)\\.attr\\(['\"]src['\"]"
+    ],
+    "Express": [
+      "app\\.use\\(\\s*express\\.static\\(",
+      "res\\.send\\(",
+      "res\\.json\\(",
+      "res\\.render\\(",
+      "req\\.params",
+      "req\\.query",
+      "req\\.body",
+      "req\\.cookies"
+    ],
+    "Next.js": [
+      "getServerSideProps",
+      "getInitialProps",
+      "getStaticProps",
+      "getStaticPaths",
+      "next\\/router",
+      "useRouter\\(",
+      "router\\.push\\(",
+      "router\\.replace\\("
+    ],
+    "Nuxt.js": [
+      "asyncData",
+      "fetch\\(",
+      "nuxtServerInit",
+      "this\\.$router",
+      "this\\.$route",
+      "this\\.$axios",
+      "this\\.$auth"
+    ]
+  },
+  "api_patterns": {
+    "rest": [
+      "\\.get\\(['\"][^'\"]+['\"]",
+      "\\.post\\(['\"][^'\"]+['\"]",
+      "\\.put\\(['\"][^'\"]+['\"]",
+      "\\.delete\\(['\"][^'\"]+['\"]",
+      "\\.patch\\(['\"][^'\"]+['\"]",
+      "fetch\\(['\"][^'\"]+['\"]",
+      "axios\\.(get|post|put|delete|patch)\\(['\"][^'\"]+['\"]"
+    ],
+    "graphql": [
+      "gql`[^`]+`",
+      "graphql`[^`]+`",
+      "useQuery\\(",
+      "useMutation\\(",
+      "useSubscription\\(",
+      "ApolloClient",
+      "createClient\\("
+    ]
+  },
+  "security_headers": [
+    "Content-Security-Policy",
+    "X-Content-Type-Options",
+    "X-Frame-Options",
+    "X-XSS-Protection",
+    "Strict-Transport-Security",
+    "Referrer-Policy",
+    "Permissions-Policy",
+    "Access-Control-Allow-Origin"
+  ],
+  "cookie_security": [
+    "HttpOnly",
+    "Secure",
+    "SameSite",
+    "Expires",
+    "Max-Age",
+    "Domain",
+    "Path"
+  ],
+  "cors_patterns": [
+    "Access-Control-Allow-Origin:\\s*\\*",
+    "Access-Control-Allow-Credentials:\\s*true",
+    "Access-Control-Allow-Methods",
+    "Access-Control-Allow-Headers",
+    "Access-Control-Expose-Headers",
+    "Access-Control-Max-Age"
+  ],
+  "prototype_pollution_sinks": [
+    "Object\\.assign",
+    "Object\\.create",
+    "Object\\.setPrototypeOf",
+    "Object\\.defineProperty",
+    "Object\\.defineProperties",
+    "\\.constructor\\.prototype",
+    "__proto__",
+    "\\[\"__proto__\"\\]",
+    "\\['__proto__'\\]"
+  ],
+  "supply_chain_patterns": [
+    "require\\(['\"][^@\\/][^'\"]*['\"]\\)",
+    "import\\s+[^\\s]+\\s+from\\s+['\"][^@\\/][^'\"]*['\"]",
+    "import\\(['\"][^@\\/][^'\"]*['\"]\\)",
+    "System\\.import\\(['\"][^@\\/][^'\"]*['\"]\\)",
+    "loadScript\\(['\"][^'\"]+['\"]\\)"
+  ],
+  "training_data": {
+    "dataset_size": 50000,
+    "positive_samples": 25000,
+    "negative_samples": 25000,
+    "validation_split": 0.2,
+    "test_split": 0.1
+  },
+  "model_performance": {
+    "accuracy": 0.92,
+    "precision": 0.89,
+    "recall": 0.94,
+    "f1_score": 0.91,
+    "false_positive_rate": 0.08
+  }
+} 
